@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login</title>
-    <link rel="stylesheet" href="./nav.css">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+
     <style>
         *{
             padding: 0;
@@ -54,76 +56,81 @@
             background-color: #357a38;
         }
 
-        
+        h1{
+            text-align: center;
+            font-size: 30px;
+            color: #45a049;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
 
-        .login-container {
-            height: 50%;
-            margin: 0 auto;
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #fff;
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 50%;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .login-container label {
-            display: block;
-            margin-bottom: 10px;
+
+        section h2 {
+            color: darkgreen;
+            margin: 7px;
         }
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        section p{
+            margin: 5px;
         }
-        .login-container input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: green;
-            color: white;
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
         }
-        .login-container input[type="submit"]:hover {
-            background-color: darkgreen;
+
+        button:hover {
+            background-color: #45a049;
         }
-        .register-message {
+
+        footer {
+            margin-top: 341px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
             text-align: center;
-            margin-top: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: green;
-            margin-top: 40px;
-            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
+
     <div class="navbar">
         <a href="#" class="navbar-brand"><img src="logo.png" alt="eLibrary"></a>
         <ul class="nav-links">
-            <li><a href="./adminLogin.html" class="nav-link">Admin</a></li>
-            <li><a href="./" class="nav-link">Student</a></li>
-            <li><a href="./showBook.html" class="nav-link">Show Books</a></li>
+            <li><a href="/adminLogin.html" class="nav-link">Admin</a></li>
+            <li><a href="/" class="nav-link">Student</a></li>
+            <li><a href="/showBook.html" class="nav-link">Show Books</a></li>
             <li><a href="#" class="nav-link">About Us</a></li>
             <li><a href="#" class="nav-link">Contact</a></li>
         </ul>
     </div>
 
-    <h1>Welcome to Admin Login</h1>
-
-    <div class="login-container">
-        <form action="/adminLogin" method="POST">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <input type="submit" value="Login">
-        </form>
-    </div>
-
+    <h1>Welcome to the Student Dashboard</h1>
     
+
+    <section id="show-books" class="section">
+        <h2>Show Books</h2>
+        <p>View all books currently available in the library.</p>
+        <button onclick="location.href='showBook.html'">Show Books</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Admin Dashboard. All rights reserved. Developer Kunal Sah</p>
+    </footer>
+
 </body>
 </html>
